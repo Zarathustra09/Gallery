@@ -1,3 +1,36 @@
 .row {
   margin: 15px;
 }
+.btn-primary.rounded-circle {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  padding: 12px; /* Adjust padding to center the icon */
+  font-size: 24px; /* Adjust icon size */
+}
+.btn-upload {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.btn-upload:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+.modal-content {
+  border-radius: 10px;
+}
+.modal-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #007bff;
+  color: #fff;
+}

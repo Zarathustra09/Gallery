@@ -1,24 +1,31 @@
 <div class="container">
-  <div class="row">
-    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
-    </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
-    </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
-    </a>
+  <!-- Upload Button -->
+  <button type="button" class="btn btn-upload" data-toggle="modal" data-target="#uploadModal">
+    <i class="fas fa-plus"></i>
+  </button>
+
+  <!-- Modal for Upload Picture -->
+  <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="uploadModalLabel">Upload Picture</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Upload form -->
+          <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="pictureUpload" class="sr-only">Choose Picture</label> <!-- Screen reader text for accessibility -->
+              <input type="file" class="form-control-file" id="pictureUpload" name="pictureUpload" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid rounded">
-    </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid rounded">
-    </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4">
-      <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid rounded">
-    </a>
-  </div>
+
 </div>
