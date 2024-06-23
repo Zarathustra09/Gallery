@@ -626,3 +626,18 @@ div.portfoliocard div.follow_count{
   font-size:25px;
   color:rgba(140,140,140,1);
 }
+.edit-button {
+  border: none; /* Remove default border */
+  background: black;
+  color: white;
+  padding: 8px 16px; /* Adjust padding for desired button size */
+  border-radius: 8px; /* Add rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  display: inline-block; /* Ensure it behaves like an inline element */
+  text-decoration: none; /* Remove underline if used inside an anchor tag */
+  text-align: center; /* Center align text inside the button */
+}
+
+.edit-button:hover {
+  background: #333; /* Darken background on hover */
+}
