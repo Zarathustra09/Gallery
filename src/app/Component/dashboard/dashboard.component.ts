@@ -5,7 +5,7 @@ import {AppComponent} from "../../app.component";
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [GalleryComponent],
+  imports: [GalleryComponent,AppComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
