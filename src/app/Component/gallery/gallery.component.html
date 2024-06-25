@@ -3,14 +3,29 @@
   <button type="button" class="btn btn-upload" data-toggle="modal" data-target="#uploadModal">
     <i class="fas fa-plus"></i>
   </button>
-  <div class="gallery">
-    <div *ngFor="let image of images" class="gallery-item">
-      <img ngSrc="image.url" [alt]="image.filename" />
-      <div class="image-info">
-        <h3>{{ image.filename }}</h3>
-        <p>{{ image.description }}</p>
-        <p><strong>Uploaded at:</strong> {{ image.createdAt | date }}</p>
+
+  <!-- Modal for Upload Picture -->
+  <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="uploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="uploadModalLabel">Upload Picture</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Upload form -->
+          <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="pictureUpload" class="sr-only">Choose Picture</label> <!-- Screen reader text for accessibility -->
+              <input type="file" class="form-control-file" id="pictureUpload" name="pictureUpload" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+
 </div>

@@ -1,36 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import {ImageService} from "../../Services/image.service";
-import {Image} from "../../Models/image.model";
-import {DatePipe, NgForOf, NgOptimizedImage} from "@angular/common";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
-  templateUrl: './gallery.component.html',
   standalone: true,
-  imports: [
-    NgForOf,
-    NgOptimizedImage,
-    DatePipe
-  ],
-  styleUrls: ['./gallery.component.css']
+  imports: [],
+  templateUrl: './gallery.component.html',
+  styleUrl: './gallery.component.css'
 })
-export class GalleryComponent implements OnInit {
-  images: Image[] = [];
+export class GalleryComponent {
 
-  constructor(private imageService: ImageService) { }
-
-  ngOnInit(): void {
-    this.loadImages();
-  }
-
-  loadImages(): void {
-    this.imageService.getImages().subscribe(
-      (data: Image[]) => {
-        this.images = data;
-      },
-      error => {
-        console.error('Error fetching images', error);
-      }
-    );
-  }
 }
